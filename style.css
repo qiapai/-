@@ -1,0 +1,622 @@
+/* 全局属性 */
+* {
+    font-family: 微软雅黑;
+    margin: 0%;
+}
+.hidden {
+    display: none;
+}
+#noborder {
+    border: 0;
+}
+body {
+    width: auto;
+    height: 1448.97px;
+}
+/* 创建顶部栏样式  */
+
+.top-bar {
+    position: relative;
+    height: 30px;
+    width: 100%;
+    background-color: #e3e1e1;
+}
+
+/* 为顶部栏中添加框容纳链接 */
+
+.top-link {
+    float: right;
+}
+
+/* 为链接设置样式 */
+
+.top-link-use {
+    margin-right: 40px;
+    font-size: 12px;
+    font-weight: 350;
+    text-decoration: none;
+    vertical-align: middle;
+    color: #000000;
+}
+.top-link-use:hover {
+    color: #0096ff;
+}
+#top-link-last {
+    margin-left: 0;
+}
+
+/* 为搜索框设置样式 */
+
+#search-image {
+    position: absolute;
+    padding-top: 7px;
+    max-width: 16px;
+    max-height: 16px;
+}
+.top-search {
+    outline: none;
+    display: inline-block;
+    margin: 3px 60px 0 30px;
+}
+#search-box {
+    border-radius: 25px;
+    border: none;
+    width: 160px;
+}
+.top-search input,
+select,
+textarea {
+    background-color: #999999;
+    padding-left: 30px;
+}
+.top-search input::placeholder {
+    color: #ffffff;
+    font-size: 10px;
+}
+.top-search input:focus {
+    outline: none;
+    color: #ffffff;
+}
+
+/* @@@@@@@@@@@@@ 为主页顶部banner设置样式 */
+
+.banner-logo {
+    height: 115px;
+    width: auto;
+    margin: 0 60px;
+    background-image: url("./res/bg-gym.png");
+    background-position: right;
+    background-repeat: no-repeat;
+}
+#fosu-logo {
+    margin-top: 20px;
+    float: left;
+}
+#fosu-motto {
+    float: right;
+    padding-top: 50px;
+    padding-right: 10px;
+}
+
+/* @@@@@@@@@@@ 创建菜单栏样式 */
+
+.menu-bar {
+    background-color: #0096ff;
+    height: 54px;
+}
+.menu-list {
+    width: 90%;
+    height: 54px;
+    margin: 0 60px 0 70px;
+}
+#cloud-l {
+    background-image: url(./res/nav-cloud-l.png);
+    background-repeat: no-repeat;
+    background-position: 10px 5px;
+}
+#cloud-r {
+    background-image: url(./res/nav-cloud-r.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+/* @@@@@@@@@@@ 展开导航栏用button的实现 */
+
+.menu-container {
+    float: left;
+    width: 12%;
+    height: 54px;
+    position: relative;
+}
+.menu-container:hover .menu-dropdown-content {
+    display: block;
+}
+.menu-container:hover .menu-btn {
+    background-color: #ffffff;
+    color: #0096ff;
+}
+.menu-btn {
+    display: block;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #0096ff;
+    border: 0;
+    outline: none;
+}
+.menu-dropdown-content {
+    position: absolute;
+    background-color: rgba(0, 150, 255, 0.4);
+    width: 100%;
+    display: none;
+    z-index: 10;
+}
+.menu-dropdown-content a {
+    float: none;
+    color: #000000;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 15px;
+    z-index: 10;
+    margin: 0;
+}
+.menu-dropdown-content a:hover {
+    background-color: #0096ff;
+}
+
+/* @@@@@@@@@ banner图片的实现 */
+
+.banner-bar {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+/* .image-container img {
+  width: 25%;
+  float: left;
+  height: 600px;
+}
+.image-container {
+  position: relative;
+  width: 400%;
+  margin: 0;
+  animation: 4s slidy infinite;
+  animation-fill-mode: forwards;
+  font-size: 16px;
+} */
+/* @keyframes slidy {
+  0% {
+    left: 0%;
+  }
+  20% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+} */
+/* 弃用了研究了好久的动画(1Day)，然后发现你们居然用的是 Owl Carousel ，不开心我也要用。呜呜呜呜呜呜！！！！！ */
+/* 扩大样式范围 */
+.owl-carousel {
+    height: 100%;
+    position: relative;
+}
+.owl-stage {
+    height: 100%;
+    position: absolute;
+}
+.owl-stage-outer {
+    height: 100%;
+    position: absolute;
+}
+/* 按钮的样式更改 */
+.owl-nav {
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.owl-prev {
+    position: absolute;
+    left: 6%;
+    top: 43%;
+    outline: none;
+    margin: 0;
+    background-color: Transparent;
+    border: 0;
+}
+.owl-next:hover {
+    background: none !important;
+}
+.owl-prev:hover {
+    background: none !important;
+}
+.owl-next {
+    position: absolute;
+    right: 6%;
+    top: 43%;
+    outline: none;
+    margin: 0;
+    background-color: Transparent;
+    border: 0;
+}
+/* 动图的样式更改 */
+.owl-item {
+    height: 100% !important;
+}
+.owl-item .item {
+    height: 100% !important;
+}
+.owl-item .item img {
+    height: 100% !important;
+    width: 88% !important;
+    margin: auto;
+    cursor: help;
+}
+/* Dots的样式更改 能力有限系列 */
+.owl-dots {
+    position: absolute;
+    bottom: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.15);
+    height: 60px;
+    width: 100%;
+}
+.owl-dots button {
+    margin-top: 22px;
+    background: none !important;
+    outline: none !important;
+}
+.owl-dot span {
+    background: #ffffff !important;
+    width: 35px !important;
+    margin: 0;
+    border-radius: 0 !important;
+    height: 7px !important;
+    margin: 8px 4px !important;
+}
+.owl-dot.active span {
+    background-color: #0096ff !important;
+}
+
+/* 左右的遮罩 */
+.menu-shadow-l {
+    display: block;
+    outline: none;
+    margin: 0;
+    position: absolute;
+    height: 440px;
+    width: 6.3%;
+    background-color: rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+.menu-shadow-r {
+    right: 0px;
+    display: block;
+    outline: none;
+    margin: 0;
+    position: absolute;
+    height: 440px;
+    width: 6.3%;
+    background-color: rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+.status-bar {
+    bottom: 0px;
+    display: block;
+    outline: none;
+    margin: 0 5% 0 5%;
+    position: absolute;
+    height: 60px;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.25);
+    z-index: 10;
+}
+.status-word {
+    position: absolute;
+    display: flex;
+    color: #ffffff;
+    height: 100%;
+    align-items: center;
+    font-size: 18px;
+    padding-left: 5%;
+}
+
+/* @@@@@@@@@ 页面的主要内容 */
+
+.content-bar {
+    position: relative;
+    background-image: url(./res/bg-main.jpg);
+    height: 640px;
+    width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 10%;
+}
+.content-bar-l {
+    position: relative;
+    top: 1%;
+    float: left;
+    width: 47%;
+    height: auto;
+    padding-right: 20px;
+}
+.content-bar-r {
+    position: relative;
+    float: right;
+    top: 1%;
+    right: 0;
+    width: 47%;
+    height: auto;
+}
+/* 菜单按钮 */
+.content-menu-l {
+    align-items: center;
+    border-bottom: 4px solid;
+    border-color: #f0f0f0;
+    padding-bottom: 4px;
+    height: 5%;
+    margin-top: 15px;
+}
+.content-menu-r {
+    align-items: center;
+    padding-bottom: 4px;
+    border-bottom: 4px solid;
+    border-color: #f0f0f0;
+    height: 5%;
+    margin-top: 15px;
+}
+.content-menu-button {
+    border-bottom: 4px solid #f0f0f0;
+    margin-right: 5px;
+    padding-bottom: 5px;
+}
+.content-menu-button:hover {
+    border-color: #0096ff;
+}
+.content-menu-button a {
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bolder;
+    padding: 10px;
+    color: #808080;
+    z-index: 10;
+}
+.content-menu-button a:hover {
+    color: #000000;
+}
+.content-menu-button a:active {
+    color: #000000;
+}
+.content-menu-button-active {
+    border-bottom: 4px solid #0096ff;
+    margin-right: 5px;
+    padding-bottom: 5px;
+}
+.content-menu-button-active a {
+    color: #000000;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bolder;
+    padding: 10px;
+    z-index: 10;
+}
+/* 内容组件 */
+.content-l {
+    width: 100%;
+    background-color: #ffffff;
+    height: 385px;
+    position: relative;
+    margin-top: 10px;
+}
+.content-r {
+    width: 100%;
+    background-color: #ffffff;
+    height: 385px;
+    position: relative;
+    margin-top: 10px;
+}
+.content-detail-l {
+    display: none;
+}
+.content-detail-l-active {
+    height: auto;
+    margin: 0 25px;
+    align-items: center;
+}
+.content-detail-l-active a {
+    display: block;
+    border-bottom: 1px dashed;
+    padding: 10px 0;
+    height: 25px;
+    text-decoration: none;
+    font-size: 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #000000;
+    border-color: #000000;
+}
+.content-detail-l-active a:visited {
+    color: #000000;
+    border-color: #000000;
+    font-weight: 800;
+}
+.content-detail-l-active a:active {
+    color: #0096ff;
+    border-color: #000000;
+    font-weight: 800;
+}
+.content-detail-l-active a:hover {
+    color: #0096ff;
+    border-color: #000000;
+    font-weight: 800;
+}
+.content-detail-r {
+    display: none;
+}
+.content-detail-r-active {
+    height: auto;
+    margin: 0 25px;
+    align-items: center;
+}
+.content-detail-r-active a {
+    display: block;
+    border-bottom: 1px dashed;
+    padding: 10px 0;
+    height: 25px;
+    text-decoration: none;
+    font-size: 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #000000;
+    border-color: #000000;
+}
+.content-detail-r-active a:visited {
+    color: #000000;
+    border-color: #000000;
+    font-weight: 800;
+}
+.content-detail-r-active a:active {
+    color: #0096ff;
+    border-color: #000000;
+    font-weight: 800;
+}
+.content-detail-r-active a:hover {
+    color: #0096ff;
+    border-color: #000000;
+    font-weight: 800;
+}
+/* 内容底部图片链接 */
+.some-link {
+    position: relative;
+    float: left;
+    display: block;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 150px;
+    margin-top: 30px;
+}
+.some-link img {
+    width: 17%;
+    height: auto;
+    max-height: 110px;
+    margin: 0 1.2%;
+}
+.some-link img:hover {
+    animation: 1s shadow;
+    animation-fill-mode: forwards;
+}
+@keyframes shadow {
+    0% {
+        box-shadow: 0 0 0px #0096ff;
+    }
+    50% {
+        box-shadow: 0 0 7.5px #0096ff;
+    }
+    100% {
+        box-shadow: 0 0 10px #0096ff;
+    }
+}
+/* 内容底部文字链接栏 */
+.some-word-link {
+    position: absolute;
+    bottom: 5px;
+    width: 80%;
+    height: 35px;
+    align-items: center;
+}
+.some-word-link-container {
+    width: 80%;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+#special-margin {
+    margin-left: 10px;
+}
+.some-word-link a {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 0 18px;
+    border-right: 2px solid #000000;
+    text-decoration: none;
+    color: #000000;
+}
+.some-word-link a:visited {
+    color: #000000;
+}
+.some-word-link a:hover {
+    color: #0096ff;
+}
+
+/* @@@@@@@@@@@@@@@@网页底部 */
+.bottom-bar {
+    position: relative;
+    width: 100%;
+    background-image: url(./res/bg-footer.png);
+    height: 110px;
+    background-size: contain;
+    background-color: rgba(0, 149, 255, 0.8);
+}
+.bottom-container {
+    width: 80%;
+    margin: auto;
+    height: 75px;
+    padding-top: 20px;
+}
+.content {
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 25px;
+    float: left;
+    width: max-content;
+    margin-left: 40px;
+}
+.content a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.content a:hover {
+    color: #ffffff;
+}
+.content a:visited {
+    color: #ffffff;
+}
+.img-content-container {
+    position: absolute;
+    right: 200px;
+    width: 20%;
+    margin-top: 18px;
+}
+.img-content-container img {
+    height: 40px;
+    margin-left: 15px;
+}
